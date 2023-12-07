@@ -46,5 +46,11 @@ Gui that allows the user to choose a file on there operating system to open and 
 https://docs.godotengine.org/en/4.1/classes/class_filedialog.html - FileDialog node documtation
 Gui that allows the user to save meaning to write the text written inside the textEdit node into the opened file 
 
+
+
+https://github.com/had2020/Godot-4-Text-editor/assets/59424667/17877c23-c319-4d93-9d1b-dc2b901f5334
+
+
+
 ---------------------
 Have a Wonderful Day! 
