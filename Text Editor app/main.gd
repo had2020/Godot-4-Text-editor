@@ -4,7 +4,7 @@ extends Control
 func _on_open_pressed():
 	$FileDialog.popup() #this unhides the node using the popup method
 
-func _n_save_pressed():
+func _on_save_pressed():
 	$SaveFileDialog2.popup() #this unhides the node using the popup method
 
 func _on_file_dialog_file_selected(path):
