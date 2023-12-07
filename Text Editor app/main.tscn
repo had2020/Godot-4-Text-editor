@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjxqm0ed11arj"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_864nx"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_864nx")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 54.0
+offset_right = 643.0
+offset_bottom = 695.0
+scale = Vector2(1.77922, 0.900904)
+
+[node name="Open" type="Button" parent="."]
+layout_mode = 0
+offset_left = 726.0
+offset_top = 2.0
+offset_right = 902.0
+offset_bottom = 49.0
+text = "Open File"
+
+[node name="Save" type="Button" parent="."]
+layout_mode = 0
+offset_left = 920.0
+offset_top = 2.0
+offset_right = 1096.0
+offset_bottom = 49.0
+text = "Save As File"
+
+[node name="FileDialog" type="FileDialog" parent="."]
+title = "Open a File"
+position = Vector2i(500, 100)
+size = Vector2i(600, 500)
+ok_button_text = "Open file"
+file_mode = 0
+access = 2
+
+[node name="SaveFileDialog2" type="FileDialog" parent="."]
+position = Vector2i(500, 100)
+size = Vector2i(600, 500)
+ok_button_text = "Save"
+access = 2
+
+[connection signal="pressed" from="Open" to="." method="_on_open_pressed"]
+[connection signal="pressed" from="Save" to="." method="_on_save_pressed"]
+[connection signal="file_selected" from="FileDialog" to="." method="_on_file_dialog_file_selected"]
+[connection signal="file_selected" from="SaveFileDialog2" to="." method="_on_save_file_dialog_2_file_selected"]
